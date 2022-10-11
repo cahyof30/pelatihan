@@ -17,7 +17,7 @@ class Auth extends CI_Controller
             $data['title'] = 'User Login';
             $this->load->view('templates/v_header', $data);
             $this->load->view('auth/login');
-            $this->load->view('templates/v_footer');
+            $this->load->view('templates/footer');
         } else {
             // validasi sukses
             $this->_login();
@@ -43,6 +43,11 @@ class Auth extends CI_Controller
                         'role_id' => $user['role_id']
                     ];
                     $this->session->set_userdata($data);
+                    if ($user['role_id'] == 1) {
+                        redirect('admin');
+                    } else {
+                        redirect('user');
+                    }
                     redirect('user'); //redirect ke halaman user
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password invalid! </div>');
@@ -76,7 +81,7 @@ class Auth extends CI_Controller
             $data['title'] = 'User Registrasi';
             $this->load->view('templates/v_header', $data);
             $this->load->view('auth/register');
-            $this->load->view('templates/v_footer');
+            $this->load->view('templates/footer');
         } else {
             $data = [
                 'name' => htmlspecialchars($this->input->post('name', true)),
