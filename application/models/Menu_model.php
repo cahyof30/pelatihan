@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Menu_model extends CI_Model
 {
+
+    public function deleteUser($where = null)
+    {
+        $this->db->delete('user_menu', $where);
+    }
     public function getSubMenu()
     {
         $query = "SELECT `user_sub_menu`.*, `user_menu`.`menu`

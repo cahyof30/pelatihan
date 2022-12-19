@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fa-solid fa-language"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Pelatihan</div>
+        <div class="sidebar-brand-text mx-3">TreeLinguApp</div>
     </a>
 
     <!-- Divider -->

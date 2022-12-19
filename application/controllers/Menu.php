@@ -9,6 +9,13 @@ class Menu extends CI_Controller
         parent::__construct();
         is_logged_in();
     }
+    public function deleteUser()
+    {
+        $this->load->model('menu_model', 'menumo');
+        $where = ['id' => $this->uri->segment(3)];
+        $this->menumo->deleteUser($where);
+        redirect('menu');
+    }
 
     public function index()
     {

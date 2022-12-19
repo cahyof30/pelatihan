@@ -1,6 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -14,12 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Fanadesh</title>
+  <title>TreelinguApp</title>
 
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css" />
   <!-- progress barstle -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/css-circular-prog-bar.css">
   <!-- fonts style -->
@@ -46,11 +47,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Fanadesh
+              TreeLinguApp
             </span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
@@ -58,22 +58,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link" href="about.html"> About </a>
+                  <a class="nav-link" href="#about"> About </a>
                 </li>
 
                 <li class="nav-item ">
-                  <a class="nav-link" href="admission.html"> Admission </a>
+                  <a class="nav-link" href="#whyus"> Why Us </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="why.html"> Why Us </a>
+                  <a class="nav-link" href="#program"> Our Program </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="<?= base_url('auth') ?>">Login</a>
                 </li>
 
               </ul>
@@ -85,24 +85,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="hero-container container">
         <div class="hero_detail-box">
           <h1>
-            Best way
-            to fund
-            your study
-            abroad
+            MAU JAGO
+            BERBAHASA?
+            TreelinguApp
+            SOLUSINYA!!
           </h1>
           <p>
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam
+            Lembaga Kursus dan Pelatihan Bahasa “TreeLinguApp”
+            adalah salah satu lembaga pendidikan non formal dan pelatihan bahasa bersertifikat
+            program pelatihan bahasa :bahasa Inggris, bahasa Korea, bahasa Mandarin, bahasa Jepang dan bahasa Jerman
           </p>
           <div class="hero_btn-continer">
-            <a href="" class="call_to-btn btn_white-border">
-              Read More
-            </a>
+
           </div>
         </div>
         <div class="hero_img-container">
           <div>
-            <img src="<?php echo base_url(); ?>assets/images/hero.png" alt="" class="img-fluid">
+            <img src="<?php echo base_url(); ?>assets/images/logo1.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -118,23 +117,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
           <div class="col-md-6">
             <div class="about_img-container">
-              <img src="<?php echo base_url(); ?>assets/images/about.png" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/psa.jpg" alt="">
             </div>
           </div>
           <div class="col-md-6">
-            <div class="about_detail-box">
+            <div class="about_detail-box" id="about">
               <h3>
-                About our School
+                TreeLinguApp
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              </p>
+                TreeLinguApp mengajarkan, membina serta mencetak sumber daya manusia yang profesional dan berkualitas, yang mampu berkompetisi diera global dan memaknai tantangan sebagai peluang sesuai dengan
+                perkembangan ilmu pengetahuan dan teknologi untuk memenuhi kebutuhan masyarakat, melalui pengembangan pembelajaran Bahasa Asing.
               <div class="">
-                <a href="" class="call_to-btn btn_white-border">
-                  Read More
-                </a>
+
               </div>
             </div>
           </div>
@@ -146,29 +141,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- end about section -->
 
     <!-- admission section -->
-    <section class="admission_section">
+    <section class="admission_section" id="whyus">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="admission_detail-box">
               <h3>
-                Admission open
+                Mengapa memilih TreeLinguApp??
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                TreeLinguApp telah berhasil mencetak siswa-siswi yang mahir dalam berbagai bahasa dengan sangat baik karena TreeLinguApp memiliki metode pembelajaran yang unik dan inovatif, yaitu dengan dengan mengkombinasikan tehnologi multimedia, kelas pelatihan,
+                dan aktifitas sosial untuk membantu siswa mempelajari berbagai bahasa dalam lingkungan yang natural dan bersahabat
               </p>
               <div class="">
-                <a href="" class="call_to-btn btn_white-border">
-                  Read More
-                </a>
+
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="admission_img-container">
-              <img src="<?php echo base_url(); ?>assets/images/admission.png" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/peserta.jpg" alt="">
             </div>
           </div>
         </div>
@@ -180,28 +172,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- end admission section -->
 
     <!-- why section -->
-    <section class="why_section">
+    <section class="why_section" id="program">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="why_img-container">
-              <img src="<?php echo base_url(); ?>assets/images/why.png" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/A.jpg" alt="">
             </div>
           </div>
           <div class="col-md-6">
             <div class="why_detail-box">
               <h3>
-                Why learn on Fanadesh
+                PROGRAM UNGGULAN TREELINGUAPP
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              </p>
+                TreeLinguApp berdiri sejak tahun 2022. Program yang sangat diminati dan menjadi program unggulan di TreeLinguApp adalah kursus bahasa
+                Inggris dan bahasa Jepang. Dalam metode pembelajaran TreeLinguaApp memfasilitasi peserta dengan semaksimal mungkin sehingga peserta merasa
+                senang dan nyaman dalam pembelajaran. TreeLinguApp mempunyai program reguler dan program privat untuk peserta. </p>
               <div class="">
-                <a href="" class="call_to-btn btn_white-border">
-                  Read More
-                </a>
+
               </div>
             </div>
           </div>
@@ -213,29 +202,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- end why section -->
 
     <!-- determine section -->
-    <section class="determine_section">
+    <section class="determine_section" id>
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="determine_detail-box">
               <h3>
-                Datermine the right for you
+                Biaya??
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                Jangan khawatir mengenai biaya, karena di TreeLinguApp ada sistem angsur dan tidak akan memberatkan peserta mengenai biaya
+                TreeLinguApp menyediakan berbagai paket pembelajaran bahasa dan tentunya bisa memilih sesuai dengan kemampuan kalian.
               </p>
               <div class="">
-                <a href="" class="call_to-btn btn_white-border">
-                  Read More
-                </a>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="determine_img-container">
-              <img src="<?php echo base_url(); ?>assets/images/determine.png" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/Gedung.jpg" alt="">
             </div>
           </div>
         </div>
@@ -254,79 +239,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       Testimonial
     </h2>
     <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                </div>
               </div>
-              <div class="carousel-item">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <div class="client_img-box">
-                          <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-9">
-                        <div class="client_detail-box">
-                          <h5>
-                            Alex Du
-                          </h5>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Rosalina Maharani
+                  </h5>
+                  <p>
+                    Wow.. sangat seru sekali belajar di TreeLinguApp. Instruktur bahasa yang frienly membuat pembelajaran tidak membosankan
+                    di TreeLinguApp saya jadi pintar berbahasa Mandarin. Trimakasih banyak TreeLinguApp
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-     
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Ardian Putra Sanjaya
+                  </h5>
+                  <p>
+                    Belajar di TreeLinguApp benar-benar membuat saya menjadi pandai berbahasa Inggris. Pendaftaran dan sistem pembayaran yang
+                    sangat mudah menjadi nilai plus di TreeLinguApp ini. Thankyou
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="client_img-box">
+                  <img src="<?php echo base_url(); ?>assets/images/client.png" alt="">
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="client_detail-box">
+                  <h5>
+                    Putri Alexander
+                  </h5>
+                  <p>
+                    TreeLinguApp memang terbaik. Fasilitas yang memuaskan serta pembelajaran yang menyenangkan membuat saya sangat senang belajar di
+                    TreeLinguApp
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -334,153 +316,92 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- end client section -->
 
 
-    <!-- contact section -->
-
-    <section class="contact_section ">
-
-        <div class="container">
-         
-          <div class="row">
-            <div class="col-md-6">
-              <div class="d-flex justify-content-center d-md-block">
-                <h2>
-                  Contact Us
-                </h2>
-              </div>
-              <form action="">
-                <div class="contact_form-container">
-                  <div>
-                    <div>
-                      <input type="text" placeholder="Name">
-                    </div>
-                    <div>
-                      <input type="email" placeholder="Email">
-                    </div>
-                    <div>
-                      <input type="text" placeholder="Phone Number">
-                    </div>
-                    <div class="mt-5">
-                      <input type="text" placeholder="Message">
-                    </div>
-                    <div class="mt-5">
-                      <button type="submit">
-                        send
-                      </button>
-                    </div>
-                  </div>
-    
-                </div>
-    
-              </form>
-            </div>
-            <div class="col-md-6">
-              <div class="contact_img-box">
-                <img src="<?php echo base_url(); ?>assets/images/students.jpg" alt="">
-              </div>
-            </div>
-          </div>
+  <section class="info_section layout_padding-top">
+    <div class="info_logo-box">
+      <h2>
+        TreeLinguApp
+      </h2>
+    </div>
+    <div class="container layout_padding2">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            About Us
+          </h5>
+          <p>
+            TreeLinguApp mengajarkan, membina serta mencetak sumber daya manusia yang profesional dan berkualitas
+          </p>
         </div>
-      </section>
-      <!-- end contact section -->
-      <section class="info_section layout_padding-top">
-        <div class="info_logo-box">
-          <h2>
-              Fanadesh
-          </h2>
+        <div class="col-md-3">
+          <h5>
+            Useful Link
+          </h5>
+          <ul>
+            <li>
+              <a href="">
+                Video games
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Remote control
+              </a>
+            </li>
+            <li>
+              <a href="">
+                3d controller
+              </a>
+            </li>
+          </ul>
         </div>
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-3">
-                <h5>
-                    About Us                                                                             
-                </h5>
-               <p>
-                  dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r 
-               </p>
-              </div>
-              <div class="col-md-3">
-                <h5>
-                    Useful Link 
-                </h5>
-                <ul>
-                  <li>
-                    <a href="">
-                        Video games
-                    </a>
-                  </li>
-                  <li>
-                   <a href="">
-                      Remote control
-                   </a>
-                  </li>
-                  <li>
-                    <a href="">
-                        3d controller
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-3">
-                <h5>
-                    Contact Us
-                </h5>
-                <p>
-                    dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e 
-                </p>
-              </div>
-              <div class="col-md-3">
-           
-                <div class="subscribe_container">
-                  <h5>
-                      Newsletter
-                  </h5>
-                  <div class="form_container">
-                    <form action="">
-                      <input type="email" placeholder="Enter your email">
-                      <button type="submit">
-                        Subscribe
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <div class="container">
-              <div class="social_container">
-                 
-                  <div class="social-box">
-                    <a href="">	
-                      <img src="<?php echo base_url(); ?>assets/images/fb.png" alt="">
-                    </a>
-                    <a href="">
-                      <img src="<?php echo base_url(); ?>assets/images/twitter.png" alt="">
-                    </a>
-                    <a href="">
-                      <img src="<?php echo base_url(); ?>assets/images/linkedin.png" alt="">
-                    </a>
-                    <a href="">
-                      <img src="<?php echo base_url(); ?>assets/images/instagram.png" alt="">
-                    </a>
-                  </div>
-                </div>
-          </div>
-        </section>
+        <div class="col-md-3">
+          <h5>
+            Program
+          </h5>
+          <p>
+            Program yang sangat diminati dan menjadi program unggulan di TreeLinguApp adalah kursus bahasa Inggris dan bahasa Jepang
+          </p>
+        </div>
+        <div class="col-md-3">
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="social_container">
+
+        <div class="social-box">
+          <a href="">
+            <img src="<?php echo base_url(); ?>assets/images/fb.png" alt="">
+          </a>
+          <a href="">
+            <img src="<?php echo base_url(); ?>assets/images/twitter.png" alt="">
+          </a>
+          <a href="">
+            <img src="<?php echo base_url(); ?>assets/images/linkedin.png" alt="">
+          </a>
+          <a href="">
+            <img src="<?php echo base_url(); ?>assets/images/instagram.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- footer section -->
-  <section class="container-fluid footer_section">
+  <!-- <section class="container-fluid footer_section">
     <p>
       Copyright &copy; 2019 All Rights Reserved By
       <a href="https://html.design/">Free Html Templates</a>
     </p>
-  </section>
+  </section> -->
   <!-- footer section -->
 
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 
- 
+
 </body>
 
 </html>

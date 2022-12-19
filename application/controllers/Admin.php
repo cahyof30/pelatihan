@@ -10,16 +10,28 @@ class Admin extends CI_Controller
         is_logged_in(); //function helper buatan sendiri
     }
 
+    public function deleteUser()
+    {
+        $this->load->model('Admin_model', 'dashboard');
+        $where = ['id' => $this->uri->segment(3)];
+        $this->dashboard->deleteUser($where);
+        redirect('admin');
+    }
     public function index()
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->model('Admin_model', 'dashboard');
+        $data['dashboard'] = $this->dashboard->getRole();
+        $data['admin'] = $this->db->get('user')->result_array();
 
-        $this->load->view('templates/v_header', $data);
-        $this->load->view('templates/v_sidebar', $data);
-        $this->load->view('templates/v_topbar', $data);
-        $this->load->view('admin/index', $data);
-        $this->load->view('templates/v_footer');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar', $data);
+            $this->load->view('templates/v_topbar', $data);
+            $this->load->view('admin/index', $data);
+            $this->load->view('templates/v_footer');
+        }
     }
     // Function untuk menampilkan role
     public function role()

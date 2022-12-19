@@ -122,4 +122,36 @@ class User extends CI_Controller
             }
         }
     }
+
+    public function v_course()
+    {
+        $data['title'] = 'View Course';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->model('Instructor_model', 'instructor');
+
+        $data['material'] = $this->instructor->getMaterial();
+        $data['course'] = $this->db->get('user_course')->result_array();
+
+        // $this->form_validation->set_rules('course_id', 'Course', 'required');
+        // $this->form_validation->set_rules('title', 'Title', 'required');
+        // $this->form_validation->set_rules('url', 'URL', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar', $data);
+            $this->load->view('templates/v_topbar', $data);
+            $this->load->view('user/v_course', $data);
+            $this->load->view('templates/v_footer');
+        }
+        // } else {
+        //     $data = [
+        //         'course_id' => $this->input->post('course_id'),
+        //         'title' => $this->input->post('title'),
+        //         'url' => $this->input->post('url')
+        //     ];
+        //     $this->db->insert('user_material', $data);
+        //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New Material added!</div>');
+        //     redirect('instructor');
+        // }
+    }
 }
